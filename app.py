@@ -84,7 +84,6 @@ if user_result[0] == 0:
 else:
     color = 'red'
 
-# Good old glucose
 st.header('Radius Value Graph (Yours vs Others)')
 fig_Radius = plt.figure()
 ax3 = sns.scatterplot(x='Age', y='Radius', data=df, hue='Outcome', palette='Purples')
@@ -94,7 +93,7 @@ plt.yticks(np.arange(0, 50, 5))
 plt.title('0 - Healthy & 1 - Unhealthy')
 st.pyplot(fig_Radius)
 
-# Insulin
+
 st.header('Texture Value Graph (Yours vs Others)')
 fig_Texture = plt.figure()
 ax9 = sns.scatterplot(x='Age', y='Texture', data=df, hue='Outcome', palette='rainbow')
@@ -104,7 +103,7 @@ plt.yticks(np.arange(0, 50, 5))
 plt.title('0 - Healthy & 1 - Unhealthy')
 st.pyplot(fig_Texture)
 
-# Famous saying BP
+
 st.header('Perimeter Value Graph (Yours vs Others)')
 fig_Perimeter = plt.figure()
 ax5 = sns.scatterplot(x='Age', y='Perimeter', data=df, hue='Outcome', palette='Blues')
@@ -114,7 +113,7 @@ plt.yticks(np.arange(0, 200, 10))
 plt.title('0 - Healthy & 1 - Unhealthy')
 st.pyplot(fig_Perimeter)
 
-# Did'nt even know this before nutrition training
+
 st.header('Area Value Graph (Yours vs Others)')
 fig_Area = plt.figure()
 ax11 = sns.scatterplot(x='Age', y='Area', data=df, hue='Outcome', palette='Greens')
@@ -124,7 +123,7 @@ plt.yticks(np.arange(100, 2500, 100))
 plt.title('0 - Healthy & 1 - Unhealthy')
 st.pyplot(fig_Area)
 
-# Something new, cool
+
 st.header('Smoothness Value Graph (Yours vs Others)')
 fig_Smoothness = plt.figure()
 ax13 = sns.scatterplot(x='Age', y='Smoothness', data=df, hue='Outcome', palette='rocket')
@@ -134,7 +133,7 @@ plt.yticks(np.arange(0.0, 0.25, 0.0125))
 plt.title('0 - Healthy & 1 - Unhealthy')
 st.pyplot(fig_Smoothness)
 
-# Don't even know how thats related to diabetes.The dataset was females only though
+
 st.header('Compactness count Graph (Yours vs Others)')
 fig_Compactness = plt.figure()
 ax1 = sns.scatterplot(x='Age', y='Compactness', data=df, hue='Outcome', palette='magma')
@@ -144,7 +143,8 @@ plt.yticks(np.arange(0.0, 0.4, 0.02))
 plt.title('0 - Healthy & 1 - Unhealthy')
 st.pyplot(fig_Compactness)
 
-# Wonder how people measure that
+
+
 st.header('Concavity Value Graph (Yours vs Others)')
 fig_Concavity = plt.figure()
 ax7 = sns.scatterplot(x='Age', y='Concavity', data=df, hue='Outcome', palette='Reds')
@@ -195,7 +195,7 @@ st.subheader(
     'Lets raise awareness for Breast Cancer and show our support for cancer awareness and help many patients around the world.')
 st.write("Breast Cancer Awareness Month: October")
 
-# st.sidebar.subheader("""An article about this app: https://proskillocity.blogspot.com/2021/04/official-launch-of-our-first-web-app.html""")
+
 st.write(
     "Dataset citation : W.N. Street, W.H. Wolberg and O.L. Mangasarian. Nuclear feature extraction for breast tumor diagnosis. IS&T/SPIE 1993 International Symposium on Electronic Imaging: Science and Technology, volume 1905, pages 861-870, San Jose, CA, 1993. O.L. Mangasarian, W.N. Street and W.H. Wolberg. Breast cancer diagnosis and prognosis via linear programming. Operations Research, 43(4), pages 570-577, July-August 1995.")
 # st.write("Original owners of the dataset: Original owners: National Institute of Diabetes and Digestive and Kidney Diseases (b) Donor of database: Vincent Sigillito (vgs@aplcen.apl.jhu.edu) Research Center, RMI Group Leader Applied Physics Laboratory The Johns Hopkins University Johns Hopkins Road Laurel, MD 20707 (301) 953-6231 © Date received: 9 May 1990")
