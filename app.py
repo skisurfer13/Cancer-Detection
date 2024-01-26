@@ -17,6 +17,7 @@ from PIL import Image
 st.markdown('''
 #  Breast Cancer Detector 
 This app detects if you have Breast Cancer based on Machine Learning!
+- App built by Anshuman Shukla and Pranav Sawant of Team Skillocity.
 - Dataset Creators: 
 - Dr. William H. Wolberg, General Surgery Dept. University of Wisconsin, Clinical Sciences Center Madison, WI 53792
 - W. Nick Street, Computer Sciences Dept. University of Wisconsin, 1210 West Dayton St., Madison, WI 53706
@@ -66,9 +67,9 @@ def user_report():
       'Smoothness':Smoothness,
       'Compactness':Compactness,
       'Concavity':Concavity,
-      'Concave_points':Concave_points,
+      'Concave points':Concave_points,
       'Symmetry':Symmetry,
-      'Fractal_Dimension':Fractal_Dimension,
+      'Fractal Dimension':Fractal_Dimension,
       
         
   }
@@ -184,7 +185,7 @@ st.pyplot(fig_Concavity)
 st.header('Concave points Value Graph (Yours vs Others)')
 fig_Concavepoints = plt.figure()
 ax7 = sns.scatterplot(x = 'Age', y = 'Concave points', data = df, hue = 'Outcome', palette='mako')
-ax8 = sns.scatterplot(x = user_data['Age'], y = user_data['Concave_points'], s = 150, color = color)
+ax8 = sns.scatterplot(x = user_data['Age'], y = user_data['Concave points'], s = 150, color = color)
 plt.xticks(np.arange(0,100,5))
 plt.yticks(np.arange(0.0,0.25,0.0125))
 plt.title('0 - Healthy & 1 - Unhealthy')
@@ -206,7 +207,7 @@ st.pyplot(fig_Symmetry)
 st.header('Fractal Dimension Value Graph (Yours vs Others)')
 fig_FractalDimension = plt.figure()
 ax7 = sns.scatterplot(x = 'Age', y = 'Fractal Dimension', data = df, hue = 'Outcome', palette='crest')
-ax8 = sns.scatterplot(x = user_data['Age'], y = user_data['Fractal_Dimension'], s = 150, color = color)
+ax8 = sns.scatterplot(x = user_data['Age'], y = user_data['Fractal Dimension'], s = 150, color = color)
 plt.xticks(np.arange(0,100,5))
 plt.yticks(np.arange(0.0,0.1,0.005))
 plt.title('0 - Healthy & 1 - Unhealthy')
@@ -236,6 +237,8 @@ st.write("Dataset citation : W.N. Street, W.H. Wolberg and O.L. Mangasarian. Nuc
 st.write("Dataset License: Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)")
 
 st.write("Disclaimer: This is just a learning project based on one particular dataset so please do not depend on it to actually know if you have breast cancer or not. It might still be a false positive or false negative. A doctor is still the best fit for the determination of such diseases.")
-#image = Image.open('killocity (3).png')
+image = Image.open('killocity (3).png')
 
-#st.image(image, use_column_width=True)
+st.image(image, use_column_width=True)
+
+st.sidebar.subheader("An article about this app: https://proskillocity.blogspot.com/2021/06/breast-cancer-detection-web-app.html")
